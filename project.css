@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #f9fafc;
+}
+
+.navbar {                         /*this navbar is basically a class in html document*/
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;                               
+}
+
+.navbar__brand {      /*reducing and managing the size of logo*/
+  width: 100px;
+}
+
+.navbar__logo {     /*uses 100% of its provided space whatever the width of logo gets equal to parent div*/
+  width: 100%;
+}
+
+.nav__item {
+  background-image: linear-gradient(
+    to right,
+     #FF6969  0%,
+      #F45050 51%,
+      #FF6969 100%
+    );
+    color: #fff;       /*text color same as header color*/
+    border: none;
+    padding: 8px;
+    border-radius: 10px; /* gives the curve shape to the rectangular button*/
+}
+
+.nav__item:hover {
+  border: 2px solid #FFABAB;
+  cursor: pointer;
+}
+
+@media (min-width:768px){       /* used for tablet responsu=iveness*/
+  .navbar {
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+}
+
+@media (min-width:1024px) {
+  .navbar__brand {
+    width: 150px;    /* enhance the size of navbar components like logo and humberger button*/
+  }
+  .nav__item {
+    padding: 15px;   /*padding between text and border of button*/
+    font-size: 20px; /* increases the font size of button*/
+    font-weight: 600; /* make the text bold on button*/
+  }
+
+}
